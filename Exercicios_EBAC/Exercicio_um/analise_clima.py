@@ -77,7 +77,7 @@ def max_min_temperature(df, export_csv=True):
         TEMP_MAX = ("temperatura_C", "max")
     ).reset_index()
     df_day["Amplitude_Térmica"] = (df_day['TEMP_MAX'] - df_day['TEMP_MIN']).round(2)
-    print(df_day.to_string(index=False))     
+         
     
     if export_csv:
         carimbo_tempo = datetime.now().strftime("%Y%m%d_%H%M")
@@ -113,7 +113,7 @@ def main():
     print('\n Resumo dos dados climáticos:')
     print(df_clima.describe())
     print('-' * 40)
-    print(df_extreme)
+    print(df_extreme.describe())
     print('-' * 40)
     plot_climate_data(df_clima)
     print("\nAnálise climática concluída com sucesso.")
