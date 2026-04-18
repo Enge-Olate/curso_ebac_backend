@@ -6,6 +6,7 @@ import sys
 import argparse
 import numpy as np
 from datetime import datetime, timedelta
+
 sns.set_style(style='darkgrid')
 
 def get_climate_data(lat, lon):
@@ -14,7 +15,10 @@ def get_climate_data(lat, lon):
         'latitude': lat,
         'longitude': lon,
         'hourly': 'temperature_2m',
-        'timezone':'auto'
+        'timezone':'America/Sao_Paulo',
+        'past_days':0,
+        'forecast_days': 3
+        
     }
     
     try:
@@ -95,13 +99,13 @@ def main():
     parser.add_argument(
         '--lat',
         type=float,
-        default=-22.25,
+        default= -22.23,
         help='Latitude do local (padrão: -22.25 para Santa Rita do Sapucaí, MG)'
     )
     parser.add_argument(
         '--lon',
         type=float,
-        default=-45.70,
+        default= -45.70,
         help='Longitude do local (padrão: -45.70 para Santa Rita do Sapucaí, MG)'
     )
     
