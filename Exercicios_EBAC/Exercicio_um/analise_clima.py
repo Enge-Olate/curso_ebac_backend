@@ -14,7 +14,10 @@ def get_climate_data(lat, lon):
         'latitude': lat,
         'longitude': lon,
         'hourly': 'temperature_2m',
-        'timezone':'auto'
+        'timezone':'America/Sao_Paulo',
+        'past_days':0,
+        'forecast_days': 3
+        
     }
     
     try:
