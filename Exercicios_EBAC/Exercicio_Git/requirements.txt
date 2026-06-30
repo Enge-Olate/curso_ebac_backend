@@ -1,0 +1,13 @@
+#Bibliotecas para requisição e processamento de HTML.
+requests
+beautifulsoup4
+
+#Biblioteca para análise e exportação de dados.
+pandas
+
+#Recomendado para sites complexos.
+playwright
+
+
+#Biblioteca para variáveis de ambiente.
+python-dotenv
